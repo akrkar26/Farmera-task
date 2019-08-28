@@ -1,0 +1,34 @@
+.avatar-dimensions {
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+    border: 1px solid black;
+
+    ion-icon {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+    }
+}
+.avatar-margin {
+    margin-left: 15px;
+}
+
+.chevron-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 320px) {
+    .avatar-dimensions {
+        width: 35px;
+        height: 35px;
+    
+        ion-icon {
+            margin: 7px;
+        }
+    }
+    .avatar-margin {
+        margin-left: 10px;
+    }
+  }

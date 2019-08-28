@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <header-details></header-details>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none">
+    <ion-label class="font-size-16">TEAM ({{_userList?.length}})</ion-label>
+  </ion-item>
+  <ion-card *ngFor="let user of _userList; let i = index">
+    <team-member [member]='user' [indexOfMember]='{index: i, length: _userList.length}' [showTeam]="_showTeam"
+      (showTeamMembers)="_showteamMembers($event)"></team-member>
+  </ion-card>
+</ion-content>

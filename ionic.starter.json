@@ -1,5 +1,5 @@
 {
-  "name": "Tabs Starter",
+  "name": "Atul Starter",
   "baseref": "master",
   "tarignore": [
     "node_modules",
