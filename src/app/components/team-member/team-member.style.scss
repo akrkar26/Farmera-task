@@ -2,7 +2,6 @@
     width: 41px;
     height: 41px;
     display: inline-block;
-    border: 1px solid black;
 
     ion-icon {
         width: 20px;
@@ -17,6 +16,10 @@
 .chevron-icon {
     width: 20px;
     height: 20px;
+}
+
+.avatar-border {
+    border: 1px solid black;
 }
 
 @media only screen and (max-width: 320px) {
