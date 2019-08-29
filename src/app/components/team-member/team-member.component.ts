@@ -5,6 +5,12 @@ import { SMS } from '@ionic-native/sms/ngx';
 
 declare var window;
 
+/**
+ *Shows team members
+ *
+ * @export
+ * @class TeamMemberComponent
+ */
 @Component({
     selector: 'team-member',
     templateUrl: 'team-member.component.html',
@@ -19,10 +25,23 @@ export class TeamMemberComponent {
 
     constructor(private _callNumber: CallNumber, private _sms: SMS) { }
 
+    /**
+     *Output to home component to handle chevron icon
+     *
+     * @private
+     * @param {boolean} flag
+     * @memberof TeamMemberComponent
+     */
     private _showAllTeamMembers(flag: boolean) {
         this.showTeamMembers.emit(flag);
     }
 
+    /**
+     *calls to the number
+     *
+     * @private
+     * @memberof TeamMemberComponent
+     */
     private _makeCall() {
         if (window.cordova) {
             this._callNumber.callNumber(this.member.cell, true)
@@ -31,6 +50,12 @@ export class TeamMemberComponent {
         }
     }
 
+    /**
+     *sends sms to the number
+     *
+     * @private
+     * @memberof TeamMemberComponent
+     */
     private _doMessage() {
         if (window.cordova) {
             this._sms.send(this.member.cell, 'Hello world!');

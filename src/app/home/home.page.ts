@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
 
+/**
+ * Home page of the app
+ *
+ * @export
+ * @class HomePage
+ */
 @Component({
   selector: 'home-page',
   templateUrl: 'home.page.html',
@@ -16,6 +22,12 @@ export class HomePage {
     this._getRandomUser();
   }
 
+  /**
+   *Fetches random user from random api
+   *
+   * @private
+   * @memberof HomePage
+   */
   private _getRandomUser() {
 
     this._service.getRandomUser().subscribe((users) => {
@@ -29,6 +41,13 @@ export class HomePage {
     });
   }
 
+  /**
+   *Output event handler to toggle chevron icon
+   *
+   * @private
+   * @param {*} event
+   * @memberof HomePage
+   */
   private _showteamMembers(event) {
     this._showTeam = event;
   }

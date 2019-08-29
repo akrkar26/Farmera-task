@@ -17,6 +17,11 @@ export class AppComponent {
     this.initializeApp();
   }
 
+  /**
+   *Styles statusbar and hides splashscreen
+   *
+   * @memberof AppComponent
+   */
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();

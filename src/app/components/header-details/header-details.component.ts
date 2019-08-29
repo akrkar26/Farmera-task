@@ -3,6 +3,12 @@ import { ActionSheetController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 
+/**
+ *Shows header of the app
+ *
+ * @export
+ * @class HeaderDetailsComponent
+ */
 @Component({
     selector: 'header-details',
     templateUrl: 'header-details.component.html',
@@ -12,6 +18,12 @@ export class HeaderDetailsComponent {
 
     constructor(private _alertSheetCtrl: ActionSheetController, private _router: Router) { }
 
+    /**
+     *Shows and handle show pig button action
+     *
+     * @private
+     * @memberof HeaderDetailsComponent
+     */
     private async _managePigs() {
 
         const actionSheet = await this._alertSheetCtrl.create({
